@@ -1,6 +1,8 @@
 # gcmd
 Quick generation of terminal commands using ZSH with ChatGPT and Ollama
 
+![Demo](https://raw.githubusercontent.com/maclovin/gcmd/refs/heads/main/demo.gif)
+
 
 ## Overview
 
