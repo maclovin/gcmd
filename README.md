@@ -19,19 +19,19 @@ When you type a request into your terminal and hit the shortcut (default: `Ctrl+
 - Zsh shell
 - `jq` and `curl` installed (`brew install jq curl`)
 
-**1. Clone the repo or download ****************************************************************************************************`gcmd.zsh`****************************************************************************************************:**
+**1. Clone the repo or download**:
 
 ```sh
 git clone <your-repo-url> ~/.zsh/gcmd
 ```
 
-**2. Source the script in your ****************************************************************************************************`.zshrc`****************************************************************************************************:**
+**2. Source the script in your** `.zshrc`
 
 ```sh
 echo 'source ~/.zsh/gcmd/gcmd.zsh' >> ~/.zshrc
 ```
 
-**3. Set your API key (for OpenAI):**
+**3. Set your API key (for OpenAI)**
 
 Add your OpenAI API key to your `.zshrc`:
 
@@ -39,14 +39,14 @@ Add your OpenAI API key to your `.zshrc`:
 export OPENAI_API_KEY="your-key-here"
 ```
 
-**Or use Ollama instead (optional):**
+Or use Ollama instead (optional):
 
 ```sh
 export USE_OLLAMA=1
 export OLLAMA_MODEL="llama2" # or your favorite local model
 ```
 
-**4. Restart your terminal or reload your ****************************************************************************************************`.zshrc`****************************************************************************************************:**
+**4. Restart your terminal or reload your** `.zshrc`
 
 ```sh
 source ~/.zshrc
@@ -60,13 +60,13 @@ Simply type your request directly in your terminal, for example:
 list all the my s3 buckets with insecure policy allowing public access 
 ```
 
-Then hit `Ctrl+X` (or your customized key-binding), and GCMD will insert the command into your terminal prompt:
+Then hit `Ctrl+X` (or your customized key-binding), and **gcmd** will insert the command into your terminal prompt:
 
 ```sh
 aws s3api list-buckets --query 'Buckets[].Name' | xargs -I {} aws s3api get-bucket-acl --bucket {} | grep -B 1 -A 2 AllUsers
 ```
 
-### 📄 Example using embedded shell command
+### Example using embedded shell command
 
 You can use embedded shell commands, and GCMD will evaluate them first:
 
